@@ -1,0 +1,6 @@
+#settings
+ServerPort=8091
+BasePath=/servlet
+Base=c/:/tt/base.db
+
+

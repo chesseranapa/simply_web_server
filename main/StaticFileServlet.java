@@ -2,6 +2,8 @@ package main;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,11 +20,11 @@ public class StaticFileServlet extends HttpServlet
         this.strNameFile=strNameFile;
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-    {
+    {	
 		try (FileInputStream fin = new FileInputStream(strNameFile)){
 			byte[] fromF = new byte[fin.available()];
 			fin.read(fromF);
-			String strF = new String(fromF);
+			String strF = new String(fromF, Charset.forName("Cp1251"));
 	        //response.setContentType("text/css");
 	        response.setStatus(HttpServletResponse.SC_OK);
 	    	response.getWriter().println(strF);

@@ -30,7 +30,8 @@ public class StaticFileServlet extends HttpServlet
 	    	response.getWriter().println(strF);
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("Видимо ошибка с файлом " + strNameFile);
+			System.out.println("ошибка " + e);
 		}
     }
 }

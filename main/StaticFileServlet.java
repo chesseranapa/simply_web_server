@@ -34,4 +34,8 @@ public class StaticFileServlet extends HttpServlet
 			System.out.println("ошибка " + e);
 		}
     }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
+    	doGet(request, response);
+    }
 }

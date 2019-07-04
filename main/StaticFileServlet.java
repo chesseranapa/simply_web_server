@@ -13,7 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class StaticFileServlet extends HttpServlet
 {
-	 private String strNameFile="2";
+	private static final long serialVersionUID = -586699022081231301L;
+	private String strNameFile="2";
     
     public StaticFileServlet(String strNameFile)
     {

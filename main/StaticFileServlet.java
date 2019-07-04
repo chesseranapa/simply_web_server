@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class StaticFileServlet extends HttpServlet
 {
-    private String strNameFile="1";
+    private String strNameFile="2";
     
     public StaticFileServlet(String strNameFile)
     {

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class StaticFileServlet extends HttpServlet
 {
-    private String strNameFile="2";
+	 private String strNameFile="2";
     
     public StaticFileServlet(String strNameFile)
     {
@@ -30,7 +30,12 @@ public class StaticFileServlet extends HttpServlet
 	    	response.getWriter().println(strF);
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("Видимо ошибка с файлом " + strNameFile);
+			System.out.println("ошибка " + e);
 		}
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
+    	doGet(request, response);
     }
 }
